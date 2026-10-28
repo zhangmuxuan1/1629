@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="shell" x1="24" y1="20" x2="232" y2="236" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#142c63"/>
+      <stop offset=".58" stop-color="#10224e"/>
+      <stop offset="1" stop-color="#491a68"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="28" y1="22" x2="229" y2="233" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#64efff"/>
+      <stop offset=".55" stop-color="#687dff"/>
+      <stop offset="1" stop-color="#f05bff"/>
+    </linearGradient>
+    <linearGradient id="check" x1="63" y1="80" x2="100" y2="114" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ff99fc"/>
+      <stop offset="1" stop-color="#66f5ff"/>
+    </linearGradient>
+    <linearGradient id="line" x1="119" y1="91" x2="200" y2="91" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#37e7ff"/>
+      <stop offset="1" stop-color="#7d75ff"/>
+    </linearGradient>
+    <filter id="glow" x="20" y="18" width="216" height="220" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+  </defs>
+  <rect x="20" y="18" width="216" height="220" rx="48" fill="#42dfff" opacity=".25" filter="url(#glow)"/>
+  <rect x="24" y="22" width="208" height="212" rx="43" fill="url(#shell)" stroke="url(#rim)" stroke-width="5"/>
+  <rect x="38" y="36" width="180" height="184" rx="31" fill="#0e1c41" fill-opacity=".56" stroke="url(#rim)" stroke-opacity=".8" stroke-width="2"/>
+  <path d="M48 67h160" stroke="url(#rim)" stroke-opacity=".42" stroke-width="2"/>
+  <circle cx="187" cy="52" r="12" fill="none" stroke="#4ceeff" stroke-width="4" stroke-dasharray="20 12" stroke-linecap="round"/>
+  <g fill="#142c63" stroke="url(#rim)" stroke-width="3">
+    <rect x="53" y="82" width="34" height="34" rx="9"/>
+    <rect x="53" y="137" width="34" height="34" rx="9"/>
+    <rect x="53" y="192" width="34" height="22" rx="7"/>
+  </g>
+  <g fill="none" stroke="url(#check)" stroke-linecap="round" stroke-linejoin="round" stroke-width="5">
+    <path d="m61 98 7 7 13-15"/>
+    <path d="m61 153 7 7 13-15"/>
+    <path d="m61 201 6 6 12-12"/>
+  </g>
+  <g stroke-linecap="round">
+    <path d="M105 91h91" stroke="url(#line)" stroke-width="5"/>
+    <path d="M105 105h70" stroke="#5575c7" stroke-opacity=".65" stroke-width="3"/>
+    <path d="M105 146h91" stroke="#ac5cff" stroke-width="5"/>
+    <path d="M105 160h70" stroke="#5575c7" stroke-opacity=".65" stroke-width="3"/>
+    <path d="M105 199h77" stroke="#ff78dc" stroke-width="5"/>
+  </g>
+</svg>

@@ -1,0 +1,59 @@
+{
+  "name": "todolist",
+  "private": true,
+  "version": "1.0.0",
+  "description": "1296Todolist 桌面待办应用",
+  "author": "1629",
+  "type": "module",
+  "main": "electron\\main.cjs",
+  "scripts": {
+    "dev": "concurrently --kill-others \"vite --host 127.0.0.1\" \"wait-on http://127.0.0.1:1998 && electron .\"",
+    "build": "vite build",
+    "preview": "vite preview",
+    "dist:win": "npm run build && electron-builder --win nsis"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "concurrently": "^9.1.2",
+    "electron": "^45.0.0",
+    "electron-builder": "^26.0.12",
+    "vite": "^5.4.0",
+    "wait-on": "^8.0.3"
+  },
+  "build": {
+    "appId": "com.1629.todolist",
+    "productName": "1296Todolist",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "assets/app-icon.png",
+        "to": "app-icon.png"
+      },
+      {
+        "from": "assets/tray-icon.png",
+        "to": "tray-icon.png"
+      }
+    ],
+    "win": {
+      "icon": "assets/app-icon.ico",
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "runAfterFinish": true
+    }
+  }
+}

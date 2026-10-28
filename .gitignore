@@ -1,0 +1,6 @@
+node_modules/
+dist/
+release/
+release-1296-icon/
+.DS_Store
+Thumbs.db
